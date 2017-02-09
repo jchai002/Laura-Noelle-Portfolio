@@ -1,0 +1,241 @@
+@import
+"bootstrap/_variables.scss",
+"bootstrap/mixins/_breakpoints.scss",
+'_variables.scss';
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/fontawesome-webfont.woff2') format('woff2'),
+    url('../fonts/fontawesome-webfont.woff') format('woff'),
+    url('../fonts/fontawesome-webfont.ttf') format('truetype'),
+    url('../fonts/fontawesome-webfont.svg#fontawesomeregular') format('svg');
+//  src: url('#{$fa-font-path}/FontAwesome.otf') format('opentype'); // used when developing fonts
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin main-font-light {
+  font-family: 'proxima-nova', sans-serif;
+  font-weight: 100;
+}
+
+@mixin main-font {
+  font-family: 'proxima-nova', sans-serif;
+  font-weight: 300;
+}
+
+@mixin main-font-semibold {
+  font-family: 'proxima-nova', sans-serif;
+  font-weight: 400;
+}
+
+@mixin main-font-bold {
+  font-family: 'proxima-nova', sans-serif;
+  font-weight: 600;
+}
+
+body {
+  @include main-font;
+}
+
+p,a,h1,h2,h3,h4,h5,h6 { margin: 0; padding: 0; font-weight: 300;}
+
+/*********************
+Helpers
+*********************/
+.font-main {
+  font-weight: 300 !important;
+}
+
+.font-light {
+  font-weight: 100 !important;
+}
+
+.font-semibold {
+  font-weight: 400 !important;
+}
+
+.font-bold {
+  font-weight: 600 !important;
+}
+
+/*********************
+H1
+*********************/
+
+$desktop-h1-size: 43px;
+$desktop-h1-line-height: 45px;
+$laptop-h1-size: 43px;
+$laptop-h1-line-height: 45px;
+$tablet-h1-size: 43px;
+$tablet-h1-line-height: 45px;
+$mobile-h1-size: 43px;
+$mobile-h1-line-height: 45px;
+
+h1 {
+  margin: 0;
+  font-size: $mobile-h1-size;
+  line-height: $mobile-h1-line-height;
+  @include media-breakpoint-up(md) {
+    font-size: $tablet-h1-size;
+    line-height: $tablet-h1-line-height;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: $laptop-h1-size;
+    line-height: $laptop-h1-line-height;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: $desktop-h1-size;
+    line-height: $desktop-h1-line-height;
+  }
+}
+
+
+/*********************
+H2
+*********************/
+
+$desktop-h2-size: 45px;
+$desktop-h2-line-height: 48px;
+$laptop-h2-size: 35px;
+$laptop-h2-line-height: 38px;
+$mobile-h2-size: 35px;
+$mobile-h2-line-height: 38px;
+
+
+h2 {
+  margin: 0;
+  font-size: $mobile-h2-size;
+  line-height: $mobile-h2-line-height;
+  @include media-breakpoint-up(lg) {
+    font-size: $laptop-h2-size;
+    line-height: $laptop-h2-line-height;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: $desktop-h2-size;
+    line-height: $desktop-h2-line-height;
+  }
+}
+
+/*********************
+H3
+*********************/
+
+$desktop-h3-size: 29px;
+$desktop-h3-line-height: 30px;
+$laptop-h3-size: 29px;
+$laptop-h3-line-height: 30px;
+$mobile-h3-size: 29px;
+$mobile-h3-line-height: 30px;
+
+h3 {
+  @include main-font;
+  //color: $white;
+  font-size: $mobile-h3-size;
+  line-height: $mobile-h3-line-height;
+  @include media-breakpoint-up(lg) {
+    font-size: $laptop-h3-size;
+    line-height: $laptop-h3-line-height;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: $desktop-h3-size;
+    line-height: $desktop-h3-line-height;
+  }
+}
+
+/*********************
+H4
+*********************/
+
+$desktop-h4-size: 20px;
+$desktop-h4-line-height: 22px;
+$laptop-h4-size: 20px;
+$laptop-h4-line-height: 22px;
+$mobile-h4-size: 20px;
+$mobile-h4-line-height: 22px;
+
+h4 {
+  @include main-font-semibold;
+  margin: $space-sm auto;
+  font-size: $mobile-h4-size;
+  line-height: $mobile-h4-line-height;
+  @include media-breakpoint-up(lg) {
+    font-size: $laptop-h4-size;
+    line-height: $laptop-h4-line-height;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: $desktop-h4-size;
+    line-height: $desktop-h4-line-height;
+  }
+}
+
+/*********************
+H5
+*********************/
+
+$h5-size: 20px;
+$h5-line-height: 22px;
+
+h5 {
+  @include main-font;
+  font-size: $h5-size;
+  line-height: $h5-line-height;
+}
+
+/*********************
+p
+*********************/
+
+$desktop-p-size: 18px;
+$desktop-p-line-height: 30px;
+$laptop-p-size: 18px;
+$laptop-p-line-height: 30px;
+$mobile-p-size: 18px;
+$mobile-p-line-height: 30px;
+
+p {
+  font-size: $mobile-p-size;
+  line-height: $mobile-p-line-height;
+  @include media-breakpoint-up(lg) {
+    font-size: $laptop-p-size;
+    line-height: $laptop-p-line-height;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: $desktop-p-size;
+    line-height: $desktop-p-line-height;
+  }
+  a {
+    border-bottom: #c9cfdb solid 1px;
+    cursor: hand;
+    cursor: pointer;
+    &:hover, &:active, &:focus {
+    color: $light-purple;
+    text-decoration: none;
+    border-bottom: $light-purple solid 1px;
+    transition: all 0.3s ease-in-out;
+    }
+  }
+}
+
+/*********************
+a
+*********************/
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+  &:hover, &:active, &:focus {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+/*********************
+colors
+*********************/
+.text-green {
+  color: $light-green !important;
+}
