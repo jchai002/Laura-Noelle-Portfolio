@@ -1,4 +1,4 @@
-MasteryTrack
+Jekyll Boilerplate
 
 Uses Jekyll to compile templates and SCSS
 #Dependencies
