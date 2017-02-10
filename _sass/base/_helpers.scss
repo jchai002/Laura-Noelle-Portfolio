@@ -245,10 +245,6 @@
   list-style-type: none !important;
 }
 
-.col-right {
-  order: 2;
-}
-
 .flex {
   display: flex;
 }
@@ -260,14 +256,4 @@
 .flex-center-center {
   align-items: center;
   justify-content: center;
-}
-
-.smaller {
-    @include media-breakpoint-only(xl) {
-      font-size: 22px !important;
-      line-height: 28px;
-    }
-
-    font-size: 18px !important;
-    line-height: 24px;
 }

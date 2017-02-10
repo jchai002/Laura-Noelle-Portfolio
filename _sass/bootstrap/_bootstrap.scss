@@ -1,11 +1,8 @@
 /*!
- * Bootstrap v4.0.0-alpha.2 (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Bootstrap v3.3.7 (http://getbootstrap.com)
+ * Copyright 2011-2016 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/blob/master/LICENSE)
  */
-
-// use flex box grid
-$enable-flex: true;
 
 // Core variables and mixins
 @import "variables";
@@ -14,11 +11,11 @@ $enable-flex: true;
 // Reset and dependencies
 @import "normalize";
 @import "print";
+@import "glyphicons";
 
 // Core CSS
-@import "reboot";
+@import "scaffolding";
 @import "type";
-@import "images";
 @import "code";
 @import "grid";
 @import "tables";
@@ -26,34 +23,34 @@ $enable-flex: true;
 @import "buttons";
 
 // Components
-@import "animation";
-@import "dropdown";
-@import "button-group";
-@import "input-group";
-@import "custom-forms";
-@import "nav";
+@import "component-animations";
+@import "dropdowns";
+@import "button-groups";
+@import "input-groups";
+@import "navs";
 @import "navbar";
-@import "card";
-@import "breadcrumb";
+@import "breadcrumbs";
 @import "pagination";
 @import "pager";
 @import "labels";
+@import "badges";
 @import "jumbotron";
-@import "alert";
-@import "progress";
+@import "thumbnails";
+@import "alerts";
+@import "progress-bars";
 @import "media";
 @import "list-group";
+@import "panels";
 @import "responsive-embed";
+@import "wells";
 @import "close";
 
 // Components w/ JavaScript
-@import "modal";
+@import "modals";
 @import "tooltip";
-@import "popover";
+@import "popovers";
 @import "carousel";
 
 // Utility classes
 @import "utilities";
-@import "utilities-background";
-@import "utilities-spacing";
-@import "utilities-responsive";
+@import "responsive-utilities";
