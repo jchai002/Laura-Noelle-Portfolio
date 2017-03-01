@@ -515,15 +515,13 @@ footer {
 		vertical-align: middle;
 	}
 }
-.about-us-container {
-	margin-top: 20px;
+.about-container {
+	margin: $space-stack-lg;
 }
-.about-us-text {
-	padding-top: 10px;
-	padding-bottom: 10px;
+.about-text {
 	text-align: left;
 	h3 {
-		margin-top: 25px;
+		margin-top: 0;
 		font-family: Droid Sans, sans-serif;
 		font-size: 16px;
 		color: #5d5d5d;
