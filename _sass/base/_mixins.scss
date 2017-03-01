@@ -2,3 +2,17 @@
   background: url("../img/#{$img}") $posX $posY $repeat;
   background-size: $size;
 }
+
+@mixin keep-aspect-ratio($x, $y, $width) {
+  position: relative;
+  content: "";
+  width: $width;
+  padding-top: ($y / $x) * $width;
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+  }
+}

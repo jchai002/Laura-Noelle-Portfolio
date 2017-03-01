@@ -248,10 +248,10 @@ h4 {
 		font-style: italic;
 	}
 }
-.services-container {
+.articles-container {
 	margin-top: 10px;
 }
-.services-title {
+.articles-title {
 	margin-top: 40px;
 	background: url(../img/line.png) left center repeat-x;
 	h2 {
@@ -264,40 +264,12 @@ h4 {
 		font-weight: bold;
 	}
 }
-.service {
-	margin-top: 40px;
-	padding: 15px 15px 20px 15px;
+.articles-image-wrapper {
+	@include keep-aspect-ratio($x:5, $y:3, $width: 100%);
 	background: #f8f8f8;
 	border-bottom: 2px solid #9d426b;
-	&:hover {
-		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-		box-shadow: 0 5px 15px 0 rgba(0,0,0,.05), 0 1px 25px 0 rgba(0,0,0,.05) inset, 0 -1px 25px 0 rgba(0,0,0,.05) inset;
-		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-		transition: all .5s;
-	}
-	.service-icon {
-		font-size: 50px;
-		line-height: 50px;
-		color: #5d5d5d;
-		i {
-			vertical-align: middle;
-		}
-	}
-	h3 {
-		margin-top: 13px;
-		font-family: Droid Sans, sans-serif;
-		font-size: 14px;
-		color: #5d5d5d;
-		font-weight: bold;
-		text-transform: uppercase;
-		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-		text-shadow: 0 1px 0 rgba(255,255,255,.7);
-	}
-	p {
-		padding-bottom: 7px;
-		line-height: 24px;
-	}
 }
+
 .work-container {
 	margin-top: 50px;
 }
@@ -643,10 +615,10 @@ footer {
 		border: 5px solid #f8f8f8;
 	}
 }
-.services-full-width-container {
+.articles-full-width-container {
 	margin-top: 20px;
 }
-.services-full-width-text {
+.articles-full-width-text {
 	padding-top: 10px;
 	text-align: left;
 	h3 {
