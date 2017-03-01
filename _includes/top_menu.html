@@ -13,16 +13,16 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="top-navbar-1">
       <ul class="nav navbar-nav navbar-right">
-        <li class="active">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000">
+        <li {% if page.layout == "index" %}class="active"{% endif %}>
+          <a href="/">
             <i class="fa fa-home"></i><br>Home
           </a>
         </li>
-        <li>
-          <a href="portfolio.html"><i class="fa fa-camera"></i><br>Productions</a>
+        <li {% if page.layout == "productions" %}class="active"{% endif %}>
+          <a href="/productions.html"><i class="fa fa-camera"></i><br>Productions</a>
         </li>
-        <li>
-          <a href="about.html"><i class="fa fa-user"></i><br>About</a>
+        <li {% if page.layout == "about" %}class="active"{% endif %}>
+          <a href="/about.html"><i class="fa fa-user"></i><br>About</a>
         </li>
         <li>
           <a href="contact.html"><i class="fa fa-envelope"></i><br>Contact</a>
