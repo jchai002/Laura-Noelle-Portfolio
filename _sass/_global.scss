@@ -1,1358 +1,1026 @@
-//colors
-$color_gallery_approx: #eeeeee;
-$color_alto_approx: #dddddd;
-$white: #ffffff;
-$color_tapa_approx: #777777;
-$color_mine_shaft_approx: #333333;
-$color_fuscous_gray_approx: #555555;
-$color_celeste_approx: #cccccc;
-$black: #000;
-$color_puerto_rico_approx: #4fbfa8;
-$color_san_marino_approx: #4460ae;
-$color_thunderbird_approx: #c21f25;
-$color_picton_blue_approx: #3cf;
-$color_cabaret_approx: #cd4378;
-$color_fern_green_approx: #4a7f45;
-$color_mountain_mist_approx: #999999;
-$color_mercury_approx: #e6e6e6;
-$color_chicago_approx: #5e5e5e;
-$color_suva_gray_approx: #888888;
-$color_lochinvar_approx: #348e7b;
-$color_cararra_approx: #ebebeb;
-$black_7_5: rgba(0,0,0,.075);
-$color_puerto_rico_60_approx: rgba(79, 191, 168, 0.6);
-$color_jagged_ice_approx: #bfe8df;
-$color_jungle_green_approx: #3aa18c;
-
-//fonts
-$font_0: Montserrat;
-$font_1: sans-serif;
-$font_2: Cardo;
-$font_3: Times New Roman;
-$font_4: Times;
-$font_5: serif;
-
-//urls
-$url_0: url(../img/macbook-juice.jpg);
-
-html {
-	height: 100%;
-}
 body {
-	height: 100%;
-	font-family: $font_2, $font_3, $font_4, $font_5;
-	font-size: 16px;
-	line-height: 1.42857143;
-	color: $color_mine_shaft_approx;
-	background-color: $white;
-	&.disabled-onepage-scroll .onepage-wrapper section {
-		min-height: 100%;
-		height: auto;
+	background: #fff;
+	text-align: center;
+	font-family: Open Sans, sans-serif;
+	color: #888;
+	font-size: 12px;
+}
+.violet {
+	color: #9d426b;
+}
+a {
+	color: #9d426b;
+	text-decoration: none;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: all .3s;
+	&:hover {
+		color: #888;
+		text-decoration: none;
 	}
-}
-.wrapper {
-	height: 100% !important;
-	height: 100%;
-	margin: 0 auto;
-	overflow: hidden;
-}
-.italic {
-	font-style: italic;
-}
-.main {
-	float: left;
-	width: 100%;
-	height: 100%;
-	margin: 0 auto;
-}
-section {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-}
-.section-gray {
-	background: $color_gallery_approx;
-}
-@media(max-width: 991px) {
-	.section-gray {
-		background: $color_gallery_approx;
+	&:focus {
+		color: #888;
+		text-decoration: none;
 	}
-	.copyright {
-		text-align: center !important;
-		p.credit {
-			text-align: center !important;
+	&.big-link-1 {
+		display: inline-block;
+		padding: 5px 22px;
+		background: #9d426b;
+		color: #fff;
+		font-style: italic;
+		text-decoration: none;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 1px 25px 0 rgba(0,0,0,.05) inset, 0 -1px 25px 0 rgba(0,0,0,.05) inset;
+		&:hover {
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: none;
+		}
+		&:active {
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: 0 5px 10px 0 rgba(0,0,0,.15) inset, 0 -1px 25px 0 rgba(0,0,0,.05) inset;
 		}
 	}
-	.breadcrumb {
-		padding: 8px 0;
-		text-align: center;
+	&.big-link-2 {
+		display: inline-block;
+		width: 35px;
+		height: 35px;
+		padding-top: 6px;
+		background: #9d426b;
+		font-size: 20px;
+		color: #fff;
+		line-height: 20px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 19px;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 1px 25px 0 rgba(0,0,0,.05) inset, 0 -1px 25px 0 rgba(0,0,0,.05) inset;
+		i {
+			vertical-align: middle;
+		}
+		&:hover {
+			background: #5d5d5d;
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: none;
+		}
+		&:active {
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: 0 5px 10px 0 rgba(0,0,0,.15) inset, 0 -1px 25px 0 rgba(0,0,0,.05) inset;
+		}
+	}
+	&.big-link-3 {
+		display: inline-block;
+		padding: 5px 22px;
+		background: #9d426b;
+		font-size: 18px;
+		color: #fff;
+		font-style: italic;
+		line-height: 24px;
+		text-decoration: none;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 1px 25px 0 rgba(0,0,0,.05) inset, 0 -1px 25px 0 rgba(0,0,0,.05) inset;
+		&:hover {
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: none;
+		}
+		&:active {
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: 0 5px 10px 0 rgba(0,0,0,.15) inset, 0 -1px 25px 0 rgba(0,0,0,.05) inset;
+		}
 	}
 }
-.overlay {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	left: 0;
-	top: 0;
-	background: $black;
-	z-index: 2;
-	opacity: 0.3;
-	filter: alpha(opacity=30);
+strong {
+	font-weight: bold;
 }
-.heading {
-	text-align: center;
-	margin-bottom: 40px;
-	&:after {
-		content: " ";
-		display: block;
-		width: 100px;
-		height: 1px;
-		margin: 20px auto 20px;
-		background: $color_puerto_rico_approx;
-	}
+img {
+	max-width: 100%;
+}
+h1 {
+	line-height: 40px;
+}
+h2 {
+	line-height: 40px;
+}
+h3 {
+	line-height: 20px;
 }
 h4 {
-	font-family: $font_0, $font_1;
-	font-weight: 700;
-	line-height: 1.3;
-	color: $color_mine_shaft_approx;
-	text-transform: uppercase;
-	letter-spacing: 0.08em;
-	font-size: 24px;
-	&.heading {
-		margin-bottom: 20px;
-		&:after {
-			margin: 10px auto 20px;
-			background: $color_puerto_rico_approx;
-		}
-	}
+	line-height: 20px;
 }
-.img-responsive {
-	margin: 0 auto;
+::-moz-selection {
+	background: #9d426b;
+	color: #fff;
+	//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	text-shadow: none;
 }
-.box {
-	margin-bottom: 30px;
-}
-.content {
-	position: relative;
-	width: 100%;
-	top: 50%;
-	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-	transform: translate(0, -50%);
-	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-	transition: all 0.2s ease-out;
-	z-index: 3;
-}
-@media(max-width: 1000px) {
-	.content {
-		position: relative;
-		padding: 80px 0;
-		top: 0;
-		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-		transform: translate(0, 0);
-	}
-}
-.services {
-	.box {
-		margin-bottom: 20px;
-		text-align: center;
-	}
-	.icon {
-		width: 40px;
-		height: 40px;
-		border: solid 1px $color_fuscous_gray_approx;
-		margin: 0 auto;
-		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-		border-radius: 20px;
-		text-align: center;
-		line-height: 40px;
-	}
-}
-.contact-form {
-	margin-bottom: 40px;
-}
-p {
-	margin: 0 0 22px;
-	&.social {
-		text-align: center;
-		margin-top: 20px;
-		a {
-			margin: 0 10px 0 0;
-			color: $white;
-			display: inline-block;
-			width: 26px;
-			height: 26px;
-			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-			border-radius: 13px;
-			line-height: 26px;
-			font-size: 15px;
-			text-align: center;
-			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-			transition: all 0.2s ease-out;
-			vertical-align: bottom;
-			i {
-				vertical-align: bottom;
-				line-height: 26px;
-			}
-			&.facebook {
-				background-color: $color_san_marino_approx;
-			}
-			&.gplus {
-				background-color: $color_thunderbird_approx;
-			}
-			&.twitter {
-				background-color: $color_picton_blue_approx;
-			}
-			&.instagram {
-				background-color: $color_cabaret_approx;
-			}
-			&.email {
-				background-color: $color_fern_green_approx;
-			}
-		}
-	}
-}
-.copyright {
-	margin-top: 40px;
-	color: $color_mountain_mist_approx;
-	font-style: italic;
-	p.credit {
-		text-align: right;
-		a {
-			color: $color_mountain_mist_approx;
-		}
-	}
-}
-@media(min-width: 1200px) {
-	.copyright {
-		margin-top: 60px;
-	}
-}
-#page1 {
-	text-align: center;
-	background: $url_0 center center no-repeat;
-	background-size: cover;
-	color: $white;
-	h1 {
-		color: $white;
-	}
-	h2 {
-		color: $white;
-	}
-	h3 {
-		color: $white;
-	}
-	p {
-		font-size: 20px;
-	}
-	.icon {
-		position: absolute;
-		bottom: 40px;
-		left: 50%;
-		margin-left: -20px;
-		width: 40px;
-		height: 40px;
-		line-height: 40px;
-		border: solid 2px $white;
-		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-		border-radius: 20px;
-		z-index: 3;
-	}
-}
-.nav {
-	margin-bottom: 0;
-	padding-left: 0;
-	list-style: none;
-	> li {
-		> a {
-			padding: 10px 15px;
-			&:hover {
-				background-color: $color_gallery_approx;
-			}
-			&:focus {
-				background-color: $color_gallery_approx;
-			}
-		}
-		&.disabled > a {
-			color: $color_mountain_mist_approx;
-			&:hover {
-				color: $color_mountain_mist_approx;
-			}
-			&:focus {
-				color: $color_mountain_mist_approx;
-			}
-		}
-	}
-	.open > a {
-		background-color: $color_gallery_approx;
-		border-color: $color_puerto_rico_approx;
-		&:hover {
-			background-color: $color_gallery_approx;
-			border-color: $color_puerto_rico_approx;
-		}
-		&:focus {
-			background-color: $color_gallery_approx;
-			border-color: $color_puerto_rico_approx;
-		}
-	}
-}
-.nav-tabs {
-	border-bottom: 1px solid $color_alto_approx;
-	> li {
-		> a {
-			line-height: 1.42857143;
-			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-			border-radius: 0 0 0 0;
-			&:hover {
-				border-color: $color_gallery_approx $color_gallery_approx $color_alto_approx;
-			}
-		}
-		&.active > a {
-			color: $color_fuscous_gray_approx;
-			background-color: $white;
-			border: 1px solid $color_alto_approx;
-			&:hover {
-				color: $color_fuscous_gray_approx;
-				background-color: $white;
-				border: 1px solid $color_alto_approx;
-			}
-			&:focus {
-				color: $color_fuscous_gray_approx;
-				background-color: $white;
-				border: 1px solid $color_alto_approx;
-			}
-		}
-	}
-}
-.nav-pills {
-	> li {
-		> a {
-			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-			border-radius: 0;
-			> .badge {
-				margin-left: 3px;
-			}
-		}
-		&.active > a {
-			color: $white;
-			background-color: $color_puerto_rico_approx;
-			&:hover {
-				color: $white;
-				background-color: $color_puerto_rico_approx;
-			}
-			&:focus {
-				color: $white;
-				background-color: $color_puerto_rico_approx;
-			}
-		}
-	}
-	> .active > a > .badge {
-		color: $color_puerto_rico_approx;
-		background-color: $white;
-	}
-}
-.nav-tabs-justified {
-	> li > a {
-		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-		border-radius: 0;
-	}
-	> .active > a {
-		border: 1px solid $color_alto_approx;
-		&:hover {
-			border: 1px solid $color_alto_approx;
-		}
-		&:focus {
-			border: 1px solid $color_alto_approx;
-		}
-	}
-}
-@media(min-width: 768px) {
-	.nav-tabs-justified {
-		> li > a {
-			border-bottom: 1px solid $color_alto_approx;
-			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-			border-radius: 0 0 0 0;
-		}
-		> .active > a {
-			border-bottom-color: $white;
-			&:hover {
-				border-bottom-color: $white;
-			}
-			&:focus {
-				border-bottom-color: $white;
-			}
-		}
-	}
-	.navbar {
-		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-		border-radius: 0;
-		> {
-			.container .navbar-brand {
-				margin-left: -15px;
-			}
-			.container-fluid .navbar-brand {
-				margin-left: -15px;
-			}
-		}
-	}
-	.navbar-collapse {
-		float: left;
-		width: auto;
-		border-top: 0;
-		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-		box-shadow: none;
-		&.collapse {
-			display: block !important;
-			height: auto !important;
-			padding-bottom: 0;
-			overflow: visible !important;
-		}
-		&.in {
-			overflow-y: visible;
-		}
-		&.right {
-			float: right;
-		}
-	}
-	.navbar-nav {
-		float: left;
-		margin: 0;
-		> li {
-			float: left;
-			> a {
-				padding-top: 29px;
-				padding-bottom: 29px;
-			}
-		}
-		&.navbar-right:last-child {
-			margin-right: -15px;
-		}
-	}
-	.navbar-text {
-		float: left;
-		margin-left: 15px;
-		margin-right: 15px;
-		&.navbar-right:last-child {
-			margin-right: 0;
-		}
-	}
-	.lead {
-		font-size: 24px;
-	}
-	.navbar-fixed-top .navbar-collapse {
-		padding-left: 0;
-		padding-right: 0;
-	}
-	.navbar-static-top .navbar-collapse {
-		padding-left: 0;
-		padding-right: 0;
-	}
-	.navbar-fixed-bottom .navbar-collapse {
-		padding-left: 0;
-		padding-right: 0;
-	}
-	.container > {
-		.navbar-header {
-			margin-right: 0;
-			margin-left: 0;
-		}
-		.navbar-collapse {
-			margin-right: 0;
-			margin-left: 0;
-		}
-	}
-	.container-fluid > {
-		.navbar-header {
-			margin-right: 0;
-			margin-left: 0;
-		}
-		.navbar-collapse {
-			margin-right: 0;
-			margin-left: 0;
-		}
-	}
+::selection {
+	background: #9d426b;
+	color: #fff;
+	//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	text-shadow: none;
 }
 .navbar {
-	font-family: $font_0, $font_1;
-	min-height: 80px;
-	margin-bottom: 30px;
-	border-bottom: 1px solid transparent;
-}
-.navbar-collapse {
-	max-height: 340px;
-	overflow-x: visible;
-	padding-right: 15px;
-	padding-left: 15px;
-	&.in {
-		overflow-y: auto;
+	margin-bottom: 0;
+	background: #fff;
+	border: 0;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+	> .container .navbar-brand {
+		margin-left: 0;
 	}
 }
-@media(min-width: 768px) and(max-width: 991px) {
-	.navbar-collapse {
-		font-size: 14px;
-	}
-	.text-center-sm {
-		text-align: center !important;
-		img {
-			display: block;
-			margin-left: auto;
-			margin-right: auto;
+.dropdown-menu {
+	border: 0;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 6px 10px rgba(0, 0, 0, .15);
+	> .active > a {
+		background: #fff;
+		color: #5d5d5d;
+		&:hover {
+			background: #f8f8f8;
+			color: #9d426b;
+		}
+		&:focus {
+			background: #f8f8f8;
+			color: #9d426b;
 		}
 	}
 }
 .navbar-brand {
-	float: left;
-	padding: 10px 15px;
-	font-size: 20px;
-	line-height: 22px;
-	height: 80px;
-	&:hover {
-		text-decoration: none;
-	}
-	&:focus {
-		text-decoration: none;
-	}
+	width: 167px;
+	height: 106px;
+	background: url(../img/logo.png) left center no-repeat;
+	text-indent: -99999px;
 }
-.navbar-toggle {
-	padding: 9px 10px !important;
-	margin-right: 15px;
-	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-	border-radius: 0;
+.slider-container {
+	margin: 0 auto;
+	background: #f8f8f8 url(../img/pattern.jpg) left top repeat;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 5px 15px 0 rgba(0,0,0,.05) inset, 0 -5px 15px 0 rgba(0,0,0,.05) inset;
 }
-.navbar-nav {
-	margin: 14.5px -15px;
-	> li > a {
-		padding-top: 10px;
-		padding-bottom: 10px;
-		line-height: 22px;
-	}
+.slider {
+	padding-left: 5px;
+	padding-right: 5px;
 }
-@media(max-width: 767px) {
-	.text-center-xs {
-		text-align: center !important;
-		img {
-			display: block;
-			margin-left: auto;
-			margin-right: auto;
-		}
-	}
-	.navbar-nav .open .dropdown-menu {
-		.dropdown-header {
-			padding: 5px 15px 5px 25px;
-		}
-		> li > a {
-			padding: 5px 15px 5px 25px;
-			line-height: 22px;
-			&:hover {
-				background-image: none;
-			}
-			&:focus {
-				background-image: none;
-			}
-		}
-	}
-	.navbar-form .form-group {
-		margin-bottom: 5px;
-	}
-	.navbar-default .navbar-nav .open .dropdown-menu {
-		> {
-			.active > a {
-				color: $color_fuscous_gray_approx;
-				background-color: transparent;
-				&:hover {
-					color: $color_fuscous_gray_approx;
-					background-color: transparent;
-				}
-				&:focus {
-					color: $color_fuscous_gray_approx;
-					background-color: transparent;
-				}
-			}
-			.disabled > a {
-				color: $color_celeste_approx;
-				background-color: transparent;
-				&:hover {
-					color: $color_celeste_approx;
-					background-color: transparent;
-				}
-				&:focus {
-					color: $color_celeste_approx;
-					background-color: transparent;
-				}
-			}
-		}
-		> li > a {
-			color: $color_tapa_approx;
-			&:hover {
-				color: $color_mine_shaft_approx;
-				background-color: transparent;
-			}
-			&:focus {
-				color: $color_mine_shaft_approx;
-				background-color: transparent;
-			}
-		}
-	}
-}
-.navbar-form {
-	margin-left: -15px;
-	margin-right: -15px;
-	padding: 10px 15px;
-	border: none;
-	margin-top: 22px;
-	margin-bottom: 22px;
-}
-.navbar-btn {
-	margin-top: 22px;
-	margin-bottom: 22px;
-	&.btn-sm {
-		margin-top: 25px;
-		margin-bottom: 25px;
-	}
-	&.btn-xs {
-		margin-top: 29px;
-		margin-bottom: 29px;
-	}
-}
-.navbar-text {
-	margin-top: 29px;
-	margin-bottom: 29px;
-}
-.navbar-default {
-	background-color: $white;
-	border-bottom-color: $color_mercury_approx;
-	.navbar-brand {
-		color: $color_tapa_approx;
-		&:hover {
-			color: $color_chicago_approx;
-			background-color: transparent;
-		}
-		&:focus {
-			color: $color_chicago_approx;
-			background-color: transparent;
-		}
-	}
-	.navbar-text {
-		color: $color_tapa_approx;
-	}
-	.navbar-nav {
-		> {
-			.active > a {
-				color: $color_fuscous_gray_approx;
-				background-color: transparent;
-				&:hover {
-					color: $color_fuscous_gray_approx;
-					background-color: transparent;
-				}
-				&:focus {
-					color: $color_fuscous_gray_approx;
-					background-color: transparent;
-				}
-			}
-			.disabled > a {
-				color: $color_celeste_approx;
-				background-color: transparent;
-				&:hover {
-					color: $color_celeste_approx;
-					background-color: transparent;
-				}
-				&:focus {
-					color: $color_celeste_approx;
-					background-color: transparent;
-				}
-			}
-			.open > a {
-				background-color: transparent;
-				color: $color_fuscous_gray_approx;
-				&:hover {
-					background-color: transparent;
-					color: $color_fuscous_gray_approx;
-				}
-				&:focus {
-					background-color: transparent;
-					color: $color_fuscous_gray_approx;
-				}
-			}
-		}
-		> li > a {
-			color: $color_tapa_approx;
-			&:hover {
-				color: $color_mine_shaft_approx;
-				background-color: transparent;
-			}
-			&:focus {
-				color: $color_mine_shaft_approx;
-				background-color: transparent;
-			}
-		}
-	}
-	.navbar-toggle {
-		border-color: $color_alto_approx;
-		&:hover {
-			background-color: $color_puerto_rico_approx;
-		}
-		&:focus {
-			background-color: $color_puerto_rico_approx;
-		}
-		.icon-bar {
-			background-color: $color_suva_gray_approx;
-		}
-	}
-	.navbar-collapse {
-		border-color: $color_mercury_approx;
-	}
-	.navbar-link {
-		color: $color_tapa_approx;
-		&:hover {
-			color: $color_mine_shaft_approx;
-		}
-	}
-}
-a {
-	color: $color_puerto_rico_approx;
-	text-decoration: none;
-	&:hover {
-		color: $color_lochinvar_approx;
-		text-decoration: underline;
-	}
-	&:focus {
-		color: $color_lochinvar_approx;
-		text-decoration: underline;
-		outline: thin dotted;
-		outline-offset: -2px;
-	}
-	&.badge {
-		&:hover {
-			color: $white;
-			text-decoration: none;
-			cursor: pointer;
-		}
-		&:focus {
-			color: $white;
-			text-decoration: none;
-			cursor: pointer;
-		}
-	}
-	&.text-primary:hover {
-		color: $color_jungle_green_approx;
-	}
-	&.bg-primary:hover {
-		background-color: $color_jungle_green_approx;
-	}
-	&.list-group-item.active > .badge {
-		color: $color_puerto_rico_approx;
-		background-color: $white;
-	}
-}
-.img-rounded {
-	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-	border-radius: 0;
-}
-hr {
-	margin-top: 22px;
-	margin-bottom: 22px;
-	border: 0;
-	border-top: 1px solid $color_gallery_approx;
-}
-.breadcrumb {
-	padding: 8px 0;
-	margin-bottom: 22px;
-	background-color: $white;
-	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-	border-radius: 0;
-	text-align: right;
-	> li + li:before {
-		content: " >\00a0";
-		color: $color_celeste_approx;
-	}
-	> .active {
-		color: $color_mountain_mist_approx;
-	}
-}
-.btn {
-	font-weight: normal;
-	font-family: $font_0, $font_1;
-	text-transform: uppercase;
-	letter-spacing: 0.08em;
-	padding: 6px 12px;
-	font-size: 12px;
-	line-height: 1.42857143;
-	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-	border-radius: 0;
-}
-.btn-primary {
-	color: $color_puerto_rico_approx;
-	background-color: $white;
-	border-color: $color_puerto_rico_approx;
-	&:hover {
-		color: $color_puerto_rico_approx;
-		background-color: $color_cararra_approx;
-		border-color: $color_lochinvar_approx;
-		background: $color_puerto_rico_approx;
-		color: $white;
-	}
-	&:focus {
-		color: $color_puerto_rico_approx;
-		background-color: $color_cararra_approx;
-		border-color: $color_lochinvar_approx;
-		background: $color_puerto_rico_approx;
-		color: $white;
-	}
-	&:active {
-		color: $color_puerto_rico_approx;
-		background-color: $color_cararra_approx;
-		border-color: $color_lochinvar_approx;
-		background-image: none;
-		background: $color_puerto_rico_approx;
-		color: $white;
-	}
-	&.active {
-		color: $color_puerto_rico_approx;
-		background-color: $color_cararra_approx;
-		border-color: $color_lochinvar_approx;
-		background-image: none;
-		background: $color_puerto_rico_approx;
-		color: $white;
-	}
-	&.disabled {
-		background-color: $white;
-		border-color: $color_puerto_rico_approx;
-		&:hover {
-			background-color: $white;
-			border-color: $color_puerto_rico_approx;
-		}
-		&:focus {
-			background-color: $white;
-			border-color: $color_puerto_rico_approx;
-		}
-		&:active {
-			background-color: $white;
-			border-color: $color_puerto_rico_approx;
-		}
-		&.active {
-			background-color: $white;
-			border-color: $color_puerto_rico_approx;
-		}
-	}
-	.badge {
-		color: $white;
-		background-color: $color_puerto_rico_approx;
-	}
-}
-.btn-primary[disabled] {
-	background-color: $white;
-	border-color: $color_puerto_rico_approx;
-	&:hover {
-		background-color: $white;
-		border-color: $color_puerto_rico_approx;
-	}
-	&:focus {
-		background-color: $white;
-		border-color: $color_puerto_rico_approx;
-	}
-	&:active {
-		background-color: $white;
-		border-color: $color_puerto_rico_approx;
-	}
-	&.active {
-		background-color: $white;
-		border-color: $color_puerto_rico_approx;
-	}
-}
-.btn-lg {
-	padding: 10px 16px;
-	font-size: 20px;
-	line-height: 1.33;
-	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-	border-radius: 0;
-}
-.btn-sm {
-	padding: 5px 10px;
-	font-size: 12px;
-	line-height: 1.5;
-	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-	border-radius: 0;
-}
-.btn-xs {
-	padding: 1px 5px;
-	font-size: 12px;
-	line-height: 1.5;
-	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-	border-radius: 0;
-}
-.label {
-	font-family: $font_0, $font_1;
-	font-weight: normal;
-	text-transform: uppercase;
-}
-label {
-	font-weight: normal;
-}
-.form-control {
-	display: block;
-	width: 100%;
-	height: 36px;
-	padding: 6px 12px;
-	font-size: 16px;
-	line-height: 1.42857143;
-	color: $color_mine_shaft_approx;
-	background-color: $white;
-	background-image: none;
-	border: 1px solid $color_mountain_mist_approx;
+.flexslider {
+	margin-top: 45px;
+	margin-bottom: 55px;
+	border: 6px solid #fff;
 	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
 	border-radius: 0;
 	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-	box-shadow: none;
-	&:-ms-input-placeholder {
-		color: $color_mountain_mist_approx;
-	}
-	&:focus {
-		border-color: $color_puerto_rico_approx;
-		outline: 0;
-		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-		box-shadow: inset 0 1px 1px $black_7_5, 0 0 8px $color_puerto_rico_60_approx;
-	}
-}
-.form-control::-moz-placeholder {
-	color: $color_mountain_mist_approx;
-	opacity: 1;
-}
-.form-control::-webkit-input-placeholder {
-	color: $color_mountain_mist_approx;
-	opacity: 1 !important;
-}
-.form-group {
-	margin-bottom: 20px;
-}
-.pager {
-	margin: 22px 0;
-	border-top: solid 1px $color_gallery_approx;
-	padding-top: 22px;
-	text-transform: uppercase;
-	font-family: $font_0, $font_1;
-	li {
-		display: inline;
-		> a {
-			background-color: $white;
-			border: 1px solid $color_puerto_rico_approx;
-			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-			border-radius: 0;
-			&:hover {
-				text-decoration: none;
-				color: $white;
-				background-color: $color_puerto_rico_approx;
-			}
-			&:focus {
-				text-decoration: none;
-				color: $white;
-				background-color: $color_puerto_rico_approx;
-			}
+	box-shadow: 0 5px 15px 0 rgba(0,0,0,.05), 0 -5px 15px 0 rgba(0,0,0,.05);
+	.slides {
+		> li {
+			position: relative;
 		}
-		> span {
-			background-color: $white;
-			border: 1px solid $color_puerto_rico_approx;
-			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-			border-radius: 0;
-		}
-	}
-	.disabled {
-		> a {
-			color: $color_mountain_mist_approx;
-			background-color: $white;
-			border-color: $color_alto_approx;
-			&:hover {
-				color: $color_mountain_mist_approx;
-				background-color: $white;
-				border-color: $color_alto_approx;
-			}
-			&:focus {
-				color: $color_mountain_mist_approx;
-				background-color: $white;
-				border-color: $color_alto_approx;
-			}
-		}
-		> span {
-			color: $color_mountain_mist_approx;
-			background-color: $white;
-			border-color: $color_alto_approx;
+		.embed-responsive.embed-responsive-16by9 {
+			padding-bottom: 48.1%;
 		}
 	}
 }
-.pagination {
-	margin: 22px 0;
-	font-family: $font_0, $font_1;
-	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-	border-radius: 0;
-	> li {
-		> a {
-			padding: 6px 12px;
-			line-height: 1.42857143;
-			text-decoration: none;
-			color: $color_puerto_rico_approx;
-			background-color: $white;
-			border: 1px solid $color_alto_approx;
-			&:hover {
-				color: $color_puerto_rico_approx;
-				background-color: $color_jagged_ice_approx;
-				border-color: $color_alto_approx;
-			}
-			&:focus {
-				color: $color_puerto_rico_approx;
-				background-color: $color_jagged_ice_approx;
-				border-color: $color_alto_approx;
-			}
-		}
-		> span {
-			padding: 6px 12px;
-			line-height: 1.42857143;
-			text-decoration: none;
-			color: $color_puerto_rico_approx;
-			background-color: $white;
-			border: 1px solid $color_alto_approx;
-			&:hover {
-				color: $color_puerto_rico_approx;
-				background-color: $color_jagged_ice_approx;
-				border-color: $color_alto_approx;
-			}
-			&:focus {
-				color: $color_puerto_rico_approx;
-				background-color: $color_jagged_ice_approx;
-				border-color: $color_alto_approx;
-			}
-		}
-	}
-	> {
-		.active {
-			> a {
-				z-index: 2;
-				color: $white;
-				background-color: $color_puerto_rico_approx;
-				border-color: $color_puerto_rico_approx;
-				&:hover {
-					z-index: 2;
-					color: $white;
-					background-color: $color_puerto_rico_approx;
-					border-color: $color_puerto_rico_approx;
-				}
-				&:focus {
-					z-index: 2;
-					color: $white;
-					background-color: $color_puerto_rico_approx;
-					border-color: $color_puerto_rico_approx;
-				}
-			}
-			> span {
-				z-index: 2;
-				color: $white;
-				background-color: $color_puerto_rico_approx;
-				border-color: $color_puerto_rico_approx;
-				&:hover {
-					z-index: 2;
-					color: $white;
-					background-color: $color_puerto_rico_approx;
-					border-color: $color_puerto_rico_approx;
-				}
-				&:focus {
-					z-index: 2;
-					color: $white;
-					background-color: $color_puerto_rico_approx;
-					border-color: $color_puerto_rico_approx;
-				}
-			}
-		}
-		.disabled {
-			> span {
-				color: $color_mountain_mist_approx;
-				background-color: $white;
-				border-color: $color_alto_approx;
-				&:hover {
-					color: $color_mountain_mist_approx;
-					background-color: $white;
-					border-color: $color_alto_approx;
-				}
-				&:focus {
-					color: $color_mountain_mist_approx;
-					background-color: $white;
-					border-color: $color_alto_approx;
-				}
-			}
-			> a {
-				color: $color_mountain_mist_approx;
-				background-color: $white;
-				border-color: $color_alto_approx;
-				&:hover {
-					color: $color_mountain_mist_approx;
-					background-color: $white;
-					border-color: $color_alto_approx;
-				}
-				&:focus {
-					color: $color_mountain_mist_approx;
-					background-color: $white;
-					border-color: $color_alto_approx;
-				}
-			}
-		}
-	}
-}
-h1 {
-	font-family: $font_0, $font_1;
-	font-weight: 700;
-	line-height: 1.3;
-	color: $color_mine_shaft_approx;
-	text-transform: uppercase;
-	letter-spacing: 0.08em;
-	font-size: 48px;
-	margin-top: 0;
-	margin-bottom: 22px;
-}
-h2 {
-	font-family: $font_0, $font_1;
-	font-weight: 700;
-	line-height: 1.3;
-	color: $color_mine_shaft_approx;
-	text-transform: uppercase;
-	letter-spacing: 0.08em;
-	font-size: 36px;
-	margin-top: 0;
-	margin-bottom: 22px;
-}
-h3 {
-	font-family: $font_0, $font_1;
-	font-weight: 700;
-	line-height: 1.3;
-	color: $color_mine_shaft_approx;
-	text-transform: uppercase;
-	letter-spacing: 0.08em;
-	font-size: 31px;
-	margin-top: 0;
-	margin-bottom: 22px;
-}
-h5 {
-	font-family: $font_0, $font_1;
-	font-weight: 700;
-	line-height: 1.3;
-	color: $color_mine_shaft_approx;
-	text-transform: uppercase;
-	letter-spacing: 0.08em;
-	font-size: 16px;
-}
-h6 {
-	font-family: $font_0, $font_1;
-	font-weight: 700;
-	line-height: 1.3;
-	color: $color_mine_shaft_approx;
-	text-transform: uppercase;
-	letter-spacing: 0.08em;
-	font-size: 16px;
-}
-.h1 {
-	font-family: $font_0, $font_1;
-	font-weight: 700;
-	line-height: 1.3;
-	color: $color_mine_shaft_approx;
-	text-transform: uppercase;
-	letter-spacing: 0.08em;
-	font-size: 48px;
-	margin-top: 0;
-	margin-bottom: 22px;
-}
-.h2 {
-	font-family: $font_0, $font_1;
-	font-weight: 700;
-	line-height: 1.3;
-	color: $color_mine_shaft_approx;
-	text-transform: uppercase;
-	letter-spacing: 0.08em;
-	font-size: 36px;
-	margin-top: 0;
-	margin-bottom: 22px;
-}
-.h3 {
-	font-family: $font_0, $font_1;
-	font-weight: 700;
-	line-height: 1.3;
-	color: $color_mine_shaft_approx;
-	text-transform: uppercase;
-	letter-spacing: 0.08em;
-	font-size: 31px;
-	margin-top: 0;
-	margin-bottom: 22px;
-}
-.h4 {
-	font-family: $font_0, $font_1;
-	font-weight: 700;
-	line-height: 1.3;
-	color: $color_mine_shaft_approx;
-	text-transform: uppercase;
-	letter-spacing: 0.08em;
-	font-size: 24px;
-}
-.h5 {
-	font-family: $font_0, $font_1;
-	font-weight: 700;
-	line-height: 1.3;
-	color: $color_mine_shaft_approx;
-	text-transform: uppercase;
-	letter-spacing: 0.08em;
-	font-size: 16px;
-}
-.h6 {
-	font-family: $font_0, $font_1;
-	font-weight: 700;
-	line-height: 1.3;
-	color: $color_mine_shaft_approx;
-	text-transform: uppercase;
-	letter-spacing: 0.08em;
-	font-size: 16px;
-}
-.lead {
-	margin-bottom: 22px;
-	font-size: 18px;
-}
-.text-small {
-	font-size: 12px;
-}
-.text-large {
-	font-size: 20px;
-}
-.text-italic {
+.flex-caption {
+	position: absolute;
+	left: 0;
+	bottom: 20px;
+	width: 95%;
+	padding: 10px 20px;
+	background: #1d1d1d;
+	background: rgba(0, 0, 0, .7);
+	font-size: 14px;
+	line-height: 24px;
+	color: #eaeaea;
+	text-align: left;
 	font-style: italic;
 }
-.text-primary {
-	color: $color_puerto_rico_approx;
-}
-.bg-primary {
-	color: $white;
-	background-color: $color_puerto_rico_approx;
-}
-abbr[title] {
-	border-bottom: 1px dotted $color_mountain_mist_approx;
-}
-abbr[data-original-title] {
-	border-bottom: 1px dotted $color_mountain_mist_approx;
-}
-blockquote {
-	padding: 11px 22px;
-	margin: 0 0 22px;
-	font-size: 16px;
-	border-left: 5px solid $color_puerto_rico_approx;
-	footer {
-		display: block;
-		font-size: 80%;
-		line-height: 1.42857143;
-		color: $color_mountain_mist_approx;
+.flex-direction-nav {
+	a {
+		width: 60px;
+		height: 60px;
+		padding-top: 17px;
+		background: #9d426b;
+		color: #fff;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: none;
 		&:before {
-			content: '\2014 \00A0';
+			font-size: 26px;
 		}
 	}
-	small {
-		display: block;
-		font-size: 80%;
-		line-height: 1.42857143;
-		color: $color_mountain_mist_approx;
-		&:before {
-			content: '\2014 \00A0';
+	.flex-prev {
+		text-align: center;
+	}
+	.flex-next {
+		text-align: center;
+	}
+}
+.slider-2-container {
+	padding: 180px 0;
+}
+.slider-2-text {
+	padding: 30px 0 43px;
+	background: #1d1d1d;
+	background: rgba(0, 0, 0, .7);
+	color: #fff;
+	h1 {
+		padding-left: 30px;
+		padding-right: 30px;
+		font-family: Lobster, cursive;
+		font-size: 30px;
+		color: #fff;
+		font-weight: bold;
+	}
+	p {
+		padding-left: 30px;
+		padding-right: 30px;
+		font-size: 18px;
+		font-style: italic;
+	}
+}
+.presentation-container {
+	margin-top: 30px;
+	h1 {
+		font-family: Lobster, cursive;
+		font-size: 30px;
+		color: #5d5d5d;
+		font-weight: bold;
+	}
+	p {
+		font-size: 18px;
+		font-style: italic;
+	}
+}
+.services-container {
+	margin-top: 10px;
+}
+.services-title {
+	margin-top: 40px;
+	background: url(../img/line.png) left center repeat-x;
+	h2 {
+		width: 200px;
+		margin: 0 auto;
+		background: #fff;
+		font-family: Lobster, cursive;
+		font-size: 24px;
+		color: #5d5d5d;
+		font-weight: bold;
+	}
+}
+.service {
+	margin-top: 40px;
+	padding: 15px 15px 20px 15px;
+	background: #f8f8f8;
+	border-bottom: 2px solid #9d426b;
+	&:hover {
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 5px 15px 0 rgba(0,0,0,.05), 0 1px 25px 0 rgba(0,0,0,.05) inset, 0 -1px 25px 0 rgba(0,0,0,.05) inset;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .5s;
+	}
+	.service-icon {
+		font-size: 50px;
+		line-height: 50px;
+		color: #5d5d5d;
+		i {
+			vertical-align: middle;
 		}
 	}
-	.small {
-		display: block;
-		font-size: 80%;
-		line-height: 1.42857143;
-		color: $color_mountain_mist_approx;
-		&:before {
-			content: '\2014 \00A0';
+	h3 {
+		margin-top: 13px;
+		font-family: Droid Sans, sans-serif;
+		font-size: 14px;
+		color: #5d5d5d;
+		font-weight: bold;
+		text-transform: uppercase;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 0 1px 0 rgba(255,255,255,.7);
+	}
+	p {
+		padding-bottom: 7px;
+		line-height: 24px;
+	}
+}
+.work-container {
+	margin-top: 50px;
+}
+.work-title {
+	background: url(../img/line.png) left center repeat-x;
+	h2 {
+		width: 220px;
+		margin: 0 auto;
+		background: #fff;
+		font-family: Lobster, cursive;
+		font-size: 24px;
+		color: #5d5d5d;
+		font-weight: bold;
+	}
+}
+.work {
+	margin-top: 40px;
+	padding-bottom: 20px;
+	background: #f8f8f8;
+	border-bottom: 2px solid #9d426b;
+	&:hover {
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 5px 15px 0 rgba(0,0,0,.05), 0 1px 25px 0 rgba(0,0,0,.05) inset, 0 -1px 25px 0 rgba(0,0,0,.05) inset;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .5s;
+		img {
+			opacity: 0.7;
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: all .3s;
 		}
 	}
-	&.pull-right {
-		border-right: 5px solid $color_puerto_rico_approx;
+	.work-bottom {
+		margin-top: 15px;
+	}
+	h3 {
+		margin-top: 20px;
+		padding-left: 15px;
+		padding-right: 15px;
+		font-family: Droid Sans, sans-serif;
+		font-size: 14px;
+		color: #5d5d5d;
+		font-weight: bold;
+		text-transform: uppercase;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 0 1px 0 rgba(255,255,255,.7);
+	}
+	p {
+		padding-left: 15px;
+		padding-right: 15px;
+		line-height: 24px;
+		font-style: italic;
 	}
 }
-.blockquote-reverse {
-	border-right: 5px solid $color_puerto_rico_approx;
+.testimonials-container {
+	margin-top: 50px;
+	padding-bottom: 70px;
 }
-address {
-	margin-bottom: 22px;
-	line-height: 1.42857143;
+.testimonials-title {
+	background: url(../img/line.png) left center repeat-x;
+	h2 {
+		width: 180px;
+		margin: 0 auto;
+		background: #fff;
+		font-family: Lobster, cursive;
+		font-size: 24px;
+		color: #5d5d5d;
+		font-weight: bold;
+	}
 }
-.panel {
-	margin-bottom: 22px;
-	background-color: $white;
-	border: 1px solid transparent;
-	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-	border-radius: 0;
-	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-	box-shadow: 0 0 0;
-}
-.panel-primary {
-	border-color: $color_puerto_rico_approx;
-	> {
-		.panel-heading {
-			color: $white;
-			background-color: $color_puerto_rico_approx;
-			border-color: $color_puerto_rico_approx;
-			+ .panel-collapse .panel-body {
-				border-top-color: $color_puerto_rico_approx;
+.testimonial-list {
+	margin-top: 30px;
+	text-align: left;
+	.tab-pane {
+		overflow: hidden;
+	}
+	.testimonial-image {
+		float: left;
+		width: 10%;
+		margin: 10px 0 0;
+		img {
+			max-width: 64px;
+			border: 3px solid #eaeaea;
+		}
+	}
+	.testimonial-text {
+		float: left;
+		width: 90%;
+		font-size: 14px;
+		line-height: 30px;
+		font-style: italic;
+	}
+	.nav-tabs {
+		border: 0;
+		text-align: right;
+		li {
+			float: none;
+			display: inline-block;
+			margin-left: 2px;
+			margin-right: 2px;
+			a {
+				width: 12px;
+				height: 12px;
+				padding: 0;
+				background: #eaeaea;
+				border: 0;
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 0;
+				&:hover {
+					border: 0;
+					background: #ddd;
+				}
+			}
+			&.active a {
+				background: #9d426b;
 			}
 		}
-		.panel-footer + .panel-collapse .panel-body {
-			border-bottom-color: $color_puerto_rico_approx;
+	}
+}
+footer {
+	margin: 0 auto;
+	padding-bottom: 10px;
+	background: #f8f8f8 url(../img/pattern.jpg) left top repeat;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 5px 15px 0 rgba(0,0,0,.05) inset;
+}
+.footer-box {
+	margin-top: 20px;
+	text-align: left;
+	h4 {
+		margin-top: 20px;
+		font-family: Droid Sans, sans-serif;
+		font-size: 14px;
+		color: #5d5d5d;
+		font-weight: bold;
+		text-transform: uppercase;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 0 1px 0 rgba(255,255,255,.7);
+	}
+}
+.footer-box-text-subscribe {
+	form {
+		padding-bottom: 10px;
+	}
+	input[type="text"] {
+		width: 95%;
+		height: 26px;
+	}
+}
+.flickr-feed {
+	margin: 16px 0 0;
+	a {
+		display: inline-block;
+		width: 54px;
+		margin: 0 4px 4px 0;
+		&:hover {
+			opacity: 0.7;
+		}
+		img {
+			border: 2px solid #eaeaea;
 		}
 	}
-	.panel-title {
-		font-weight: 300;
-		a:hover {
-			color: $white;
-			text-decoration: none;
+}
+.footer-border {
+	margin-top: 30px;
+	border-top: 1px dashed #ddd;
+}
+.footer-copyright {
+	margin-top: 15px;
+	line-height: 24px;
+	text-align: left;
+}
+.footer-social {
+	margin-top: 5px;
+	text-align: right;
+	a {
+		margin: 0 0 0 10px;
+		font-size: 26px;
+		color: #888;
+		&:hover {
+			color: #9d426b;
+		}
+		&:focus {
+			color: #9d426b;
 		}
 	}
 }
-.container > {
-	.navbar-header {
-		margin-right: -15px;
-		margin-left: -15px;
+.page-title-container {
+	margin: 0 auto;
+	padding: 30px 0 35px;
+	background: #f8f8f8 url(../img/pattern.jpg) left top repeat;
+	text-align: left;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 5px 15px 0 rgba(0,0,0,.05) inset, 0 -5px 15px 0 rgba(0,0,0,.05) inset;
+	h1 {
+		display: inline;
+		margin-left: 10px;
+		font-family: Lobster, cursive;
+		font-size: 24px;
+		color: #5d5d5d;
+		font-weight: bold;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 0 1px 0 rgba(255, 255, 255, .7);
+		vertical-align: middle;
 	}
-	.navbar-collapse {
-		margin-right: -15px;
-		margin-left: -15px;
+	p {
+		display: inline;
+		margin-left: 5px;
+		font-size: 14px;
+		font-style: italic;
+		vertical-align: middle;
+	}
+	i {
+		font-size: 46px;
+		color: #ccc;
+		vertical-align: middle;
 	}
 }
-.container-fluid > {
-	.navbar-header {
-		margin-right: -15px;
-		margin-left: -15px;
+.about-us-container {
+	margin-top: 20px;
+}
+.about-us-text {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: left;
+	h3 {
+		margin-top: 25px;
+		font-family: Droid Sans, sans-serif;
+		font-size: 16px;
+		color: #5d5d5d;
+		font-weight: bold;
+		text-transform: uppercase;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 0 1px 0 rgba(255,255,255,.7);
 	}
-	.navbar-collapse {
-		margin-right: -15px;
-		margin-left: -15px;
+	p {
+		line-height: 28px;
+		font-size: 13px;
 	}
 }
-.open .dropdown-toggle.btn-primary {
-	color: $color_puerto_rico_approx;
-	background-color: $color_cararra_approx;
-	border-color: $color_lochinvar_approx;
-	background-image: none;
+.team-container {
+	margin-top: 30px;
 }
-fieldset[disabled] .btn-primary {
-	background-color: $white;
-	border-color: $color_puerto_rico_approx;
+.team-title {
+	background: url(../img/line.png) left center repeat-x;
+	h2 {
+		width: 220px;
+		margin: 0 auto;
+		background: #fff;
+		font-family: Lobster, cursive;
+		font-size: 24px;
+		color: #5d5d5d;
+		font-weight: bold;
+	}
+}
+.team-box {
+	margin-top: 40px;
+	padding-bottom: 15px;
+	background: #f8f8f8;
+	border-bottom: 2px solid #9d426b;
 	&:hover {
-		background-color: $white;
-		border-color: $color_puerto_rico_approx;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 5px 15px 0 rgba(0,0,0,.05), 0 1px 25px 0 rgba(0,0,0,.05) inset, 0 -1px 25px 0 rgba(0,0,0,.05) inset;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .5s;
+		img {
+			opacity: 0.7;
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: all .3s;
+		}
+	}
+	h3 {
+		margin-top: 20px;
+		padding-left: 15px;
+		padding-right: 15px;
+		font-family: Droid Sans, sans-serif;
+		font-size: 14px;
+		color: #5d5d5d;
+		font-weight: bold;
+		text-transform: uppercase;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 0 1px 0 rgba(255,255,255,.7);
+	}
+	p {
+		padding-left: 15px;
+		padding-right: 15px;
+		line-height: 24px;
+		font-style: italic;
+	}
+}
+.contact-us-container {
+	margin-top: 20px;
+	padding-bottom: 50px;
+	text-align: left;
+	h3 {
+		margin-top: 25px;
+		font-family: Droid Sans, sans-serif;
+		font-size: 16px;
+		color: #5d5d5d;
+		font-weight: bold;
+		text-transform: uppercase;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 0 1px 0 rgba(255,255,255,.7);
+	}
+	p {
+		line-height: 28px;
+		font-size: 13px;
+	}
+}
+.contact-form {
+	padding-top: 25px;
+	padding-bottom: 30px;
+	form {
+		margin-top: 25px;
+		.form-group {
+			margin-bottom: 20px;
+		}
+	}
+	input[type="text"] {
+		width: 95%;
+		height: 34px;
+	}
+	textarea {
+		width: 95%;
+		height: 170px;
+		padding-top: 6px;
+		padding-bottom: 6px;
+	}
+	label {
+		font-size: 13px;
+		font-weight: 400;
+		.error-label {
+			font-style: italic;
+		}
+	}
+	button {
+		margin-top: 5px;
+		padding: 0 45px;
+	}
+}
+.contact-address {
+	padding-bottom: 15px;
+	.map {
+		margin: 20px 0 40px;
+		height: 300px;
+		border: 5px solid #f8f8f8;
+	}
+}
+.services-full-width-container {
+	margin-top: 20px;
+}
+.services-full-width-text {
+	padding-top: 10px;
+	text-align: left;
+	h3 {
+		margin-top: 25px;
+		font-family: Droid Sans, sans-serif;
+		font-size: 16px;
+		color: #5d5d5d;
+		font-weight: bold;
+		text-transform: uppercase;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 0 1px 0 rgba(255,255,255,.7);
+	}
+	p {
+		line-height: 28px;
+		font-size: 13px;
+	}
+}
+.services-half-width-container {
+	margin-top: 20px;
+}
+.services-half-width-text {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: left;
+	h3 {
+		margin-top: 25px;
+		font-family: Droid Sans, sans-serif;
+		font-size: 16px;
+		color: #5d5d5d;
+		font-weight: bold;
+		text-transform: uppercase;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 0 1px 0 rgba(255,255,255,.7);
+	}
+	p {
+		line-height: 28px;
+		font-size: 13px;
+	}
+}
+.call-to-action-container {
+	margin-top: 20px;
+	padding-bottom: 50px;
+}
+.call-to-action-text {
+	padding-top: 25px;
+	padding-bottom: 15px;
+	background: #f8f8f8;
+	text-align: left;
+	overflow: hidden;
+	&:hover {
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 3px 10px 0 rgba(0,0,0,.05), 0 1px 25px 0 rgba(0,0,0,.05) inset, 0 -1px 25px 0 rgba(0,0,0,.05) inset;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .5s;
+	}
+	p {
+		float: left;
+		width: 80%;
+		padding-left: 25px;
+		line-height: 30px;
+		font-size: 18px;
+		font-style: italic;
+	}
+	.call-to-action-button {
+		float: left;
+		width: 20%;
+		padding-right: 25px;
+		margin-bottom: 10px;
+		text-align: right;
+	}
+}
+.portfolio-container {
+	margin-top: 20px;
+	padding-bottom: 50px;
+}
+.portfolio-filters {
+	padding-top: 35px;
+	padding-bottom: 10px;
+	font-family: Droid Sans, sans-serif;
+	font-size: 16px;
+	color: #5d5d5d;
+	font-weight: bold;
+	text-align: left;
+	text-transform: uppercase;
+	//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	text-shadow: 0 1px 0 rgba(255,255,255,.7);
+	a {
+		color: #5d5d5d;
+		&:hover {
+			color: #9d426b;
+		}
+		&.active {
+			color: #9d426b;
+		}
+	}
+}
+.portfolio-box {
+	width: 255px;
+	margin: 40px 15px 0;
+	img {
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .3s;
+	}
+	&:hover img {
+		opacity: 0.7;
+	}
+}
+.portfolio-box-container {
+	position: relative;
+	background: #f8f8f8;
+	border-bottom: 2px solid #9d426b;
+	&:hover {
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 5px 15px 0 rgba(0,0,0,.05), 0 1px 25px 0 rgba(0,0,0,.05) inset, 0 -1px 25px 0 rgba(0,0,0,.05) inset;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .5s;
+	}
+	.embed-responsive.embed-responsive-16by9 {
+		padding-bottom: 48%;
+	}
+}
+.portfolio-box-icon {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 35px;
+	height: 35px;
+	padding-top: 7.5px;
+	padding-left: 3px;
+	background: #1d1d1d;
+	background: rgba(0, 0, 0, .7);
+	font-size: 20px;
+	color: #fff;
+	line-height: 20px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 19px;
+}
+.portfolio-box-text {
+	padding: 0 15px 20px;
+	h3 {
+		cursor: pointer;
+		margin-top: 20px;
+		font-family: Droid Sans, sans-serif;
+		font-size: 14px;
+		color: #5d5d5d;
+		font-weight: bold;
+		text-transform: uppercase;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 0 1px 0 rgba(255,255,255,.7);
+	}
+	p {
+		line-height: 24px;
+		font-style: italic;
+	}
+}
+.pricing-1-container {
+	margin-top: 47px;
+}
+.pricing-1-title {
+	background: url(../img/line.png) left center repeat-x;
+	h2 {
+		width: 160px;
+		margin: 0 auto;
+		background: #fff;
+		font-family: Lobster, cursive;
+		font-size: 24px;
+		color: #5d5d5d;
+		font-weight: bold;
+	}
+}
+.pricing-1-box {
+	padding-top: 40px;
+	padding-bottom: 20px;
+	h3 {
+		margin-top: 0;
+		margin-bottom: 0;
+		padding: 10px 20px;
+		background: #eee;
+		font-family: Droid Sans, sans-serif;
+		font-size: 16px;
+		color: #5d5d5d;
+		font-weight: bold;
+		text-transform: uppercase;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 0 1px 0 rgba(255,255,255,.7);
+	}
+	&.pricing-1-box-best {
+		h3 {
+			background: #9d426b;
+			color: #fff;
+			//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			text-shadow: none;
+		}
+		h4 {
+			background: #8d3b60;
+			color: #fff;
+			//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			text-shadow: none;
+		}
+	}
+	h4 {
+		margin-top: 0;
+		margin-bottom: 2px;
+		padding: 10px 20px;
+		background: #e8e8e8;
+		font-family: Droid Sans, sans-serif;
+		font-size: 14px;
+		color: #5d5d5d;
+		line-height: 30px;
+		font-weight: bold;
+		text-transform: uppercase;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 0 1px 0 rgba(255,255,255,.7);
+	}
+}
+.pricing-1-box-inner {
+	background: #f8f8f8;
+	&:hover {
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 5px 15px 0 rgba(0,0,0,.05), 0 1px 25px 0 rgba(0,0,0,.05) inset, 0 -1px 25px 0 rgba(0,0,0,.05) inset;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .5s;
+	}
+}
+.pricing-1-box-price {
+	padding: 20px 0 7px;
+	background: #eee;
+	font-family: Droid Sans, sans-serif;
+	font-size: 42px;
+	color: #5d5d5d;
+	line-height: 54px;
+	//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	text-shadow: 0 1px 0 rgba(255,255,255,.7);
+	span {
+		font-family: Open Sans, sans-serif;
+		font-size: 14px;
+		color: #888;
+		line-height: 30px;
+		font-style: italic;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: none;
+	}
+}
+.pricing-1-box-features {
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	li {
+		padding: 10px 20px;
+		border-bottom: 1px solid #eee;
+		font-size: 14px;
+		line-height: 18px;
+	}
+}
+.pricing-1-box-sign-up {
+	padding: 25px 0;
+}
+.pricing-2-container {
+	margin-top: 30px;
+	padding-bottom: 40px;
+}
+ul.navbar-nav {
+	font-size: 14px;
+	color: #888;
+	text-transform: uppercase;
+	li {
+		a {
+			padding: 23px 20px;
+			background: #fff;
+			border-top: 5px solid #fff;
+			color: #5d5d5d;
+			&:hover {
+				background: #9d426b;
+				border-color: #9d426b;
+				color: #fff;
+				outline: 0;
+				i {
+					color: #fff;
+				}
+			}
+			&:focus {
+				background: #9d426b;
+				border-color: #9d426b;
+				color: #fff;
+				outline: 0;
+				i {
+					color: #fff;
+				}
+			}
+			i {
+				line-height: 35px;
+				color: #aaa;
+			}
+		}
+		&.active {
+			a {
+				background: #f8f8f8;
+				border-color: #9d426b;
+				color: #5d5d5d;
+			}
+			.dropdown-menu {
+				a {
+					background: #fff;
+					color: #5d5d5d;
+					border: 0;
+					&:hover {
+						background: #9d426b;
+						color: #fff;
+						border: 0;
+					}
+					&:focus {
+						background: #9d426b;
+						color: #fff;
+						border: 0;
+					}
+				}
+				> .active > a {
+					background: #f8f8f8;
+					color: #9d426b;
+					border: 0;
+					&:hover {
+						background: #9d426b;
+						color: #fff;
+						border: 0;
+					}
+					&:focus {
+						background: #9d426b;
+						color: #fff;
+						border: 0;
+					}
+				}
+			}
+		}
+		.dropdown-menu a {
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+	}
+}
+.nav .open > a {
+	background: #f8f8f8;
+	border-color: #9d426b;
+	color: #5d5d5d;
+	&:hover {
+		background: #9d426b;
+		border-color: #9d426b;
+		color: #fff;
 	}
 	&:focus {
-		background-color: $white;
-		border-color: $color_puerto_rico_approx;
-	}
-	&:active {
-		background-color: $white;
-		border-color: $color_puerto_rico_approx;
-	}
-	&.active {
-		background-color: $white;
-		border-color: $color_puerto_rico_approx;
+		background: #9d426b;
+		border-color: #9d426b;
+		color: #fff;
 	}
 }
-.dropdown-menu > li > a {
-	padding: 5px 20px;
+.footer-box-text p {
+	line-height: 24px;
+}
+.footer-box-text-contact i {
+	padding-right: 7px;
+}
+.team-social a {
+	margin: 0 5px;
+	font-size: 26px;
+}
+.pricing-1-box-best .pricing-1-box-price {
+	background: #9d426b;
+	color: #fff;
+	//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	text-shadow: none;
+	span {
+		color: #fff;
+	}
 }
