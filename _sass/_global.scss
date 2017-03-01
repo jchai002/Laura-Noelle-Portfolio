@@ -132,10 +132,7 @@ h4 {
 	}
 	.navbar-collapse {
 		z-index: 100;
-		position: fixed;
-		width: 100%;
-		margin: 0;
-		left: 0;
+		position: relative;
 	}
 	@media (min-width: 768px) {
 
