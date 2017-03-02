@@ -1,32 +1,42 @@
 
 jQuery(document).ready(function() {
-	
+
 	/*
-	    Wow
+	Wow
 	*/
 	new WOW().init();
-	
+
 	/*
-	    Slider
+	Slider
 	*/
 	$('.flexslider').flexslider({
-        animation: "slide",
-        controlNav: "thumbnails",
-        prevText: "",
-        nextText: ""
-    });
-	
+		animation: "slide",
+		controlNav: "thumbnails",
+		prevText: "",
+		nextText: "",
+		slideshow: false,
+		before: function(slider) {
+			var slideNumber = slider.currentSlide;
+			var slide = slider.slides[slideNumber];
+			var $iframe = $(slide).find('iframe');
+			// reset iframe src to stop video
+			var url = $iframe.attr('src');
+			$iframe.attr('src', '');
+			$iframe.attr('src', url);
+		}
+	});
+
 	/*
-	    Slider 2
+	Slider 2
 	*/
 	$('.slider-2-container').backstretch([
-	  "assets/img/slider/5.jpg"
-	, "assets/img/slider/6.jpg"
-	, "assets/img/slider/7.jpg"
+		"assets/img/slider/5.jpg"
+		, "assets/img/slider/6.jpg"
+		, "assets/img/slider/7.jpg"
 	], {duration: 3000, fade: 750});
-	
+
 	/*
-	    Image popup (home latest work)
+	Image popup (home latest work)
 	*/
 	$('.view-work').magnificPopup({
 		type: 'image',
@@ -47,142 +57,142 @@ jQuery(document).ready(function() {
 			}
 		}
 	});
-	
+
 	/*
-	    Flickr feed
+	Flickr feed
 	*/
 	$('.flickr-feed').jflickrfeed({
-        limit: 8,
-        qstrings: {
-            id: '52617155@N08'
-        },
-        itemTemplate: '<a href="{{link}}" target="_blank" rel="nofollow"><img src="{{image_s}}" alt="{{title}}" /></a>'
-    });
-	
+		limit: 8,
+		qstrings: {
+			id: '52617155@N08'
+		},
+		itemTemplate: '<a href="{{link}}" target="_blank" rel="nofollow"><img src="{{image_s}}" alt="{{title}}" /></a>'
+	});
+
 	/*
-	    Google maps
+	Google maps
 	*/
 	var position = new google.maps.LatLng(45.067883, 7.687231);
-    $('.map').gmap({'center': position,'zoom': 15, 'disableDefaultUI':true, 'callback': function() {
-            var self = this;
-            self.addMarker({'position': this.get('map').getCenter() });	
-        }
-    });
-    
-    /*
-	    Subscription form
-	*/
-	$('.success-message').hide();
-	$('.error-message').hide();
-	
-	$('.footer-box-text-subscribe form').submit(function(e) {
-		e.preventDefault();
-		
-		var form = $(this);
-	    var postdata = form.serialize();
-	    
-	    $.ajax({
-	        type: 'POST',
-	        url: 'assets/subscribe.php',
-	        data: postdata,
-	        dataType: 'json',
-	        success: function(json) {
-	            if(json.valid == 0) {
-	                $('.success-message').hide();
-	                $('.error-message').hide();
-	                $('.error-message').html(json.message);
-	                $('.error-message').fadeIn();
-	            }
-	            else {
-	                $('.error-message').hide();
-	                $('.success-message').hide();
-	                form.hide();
-	                $('.success-message').html(json.message);
-	                $('.success-message').fadeIn();
-	            }
-	        }
-	    });
-	});
-    
-    /*
-	    Contact form
-	*/
-    $('.contact-form form').submit(function(e) {
-    	e.preventDefault();
+	$('.map').gmap({'center': position,'zoom': 15, 'disableDefaultUI':true, 'callback': function() {
+		var self = this;
+		self.addMarker({'position': this.get('map').getCenter() });
+	}
+});
 
-    	var form = $(this);
-    	var nameLabel = form.find('label[for="contact-name"]');
-    	var emailLabel = form.find('label[for="contact-email"]');
-    	var messageLabel = form.find('label[for="contact-message"]');
-    	
-    	nameLabel.html('Name');
-    	emailLabel.html('Email');
-    	messageLabel.html('Message');
-        
-        var postdata = form.serialize();
-        
-        $.ajax({
-            type: 'POST',
-            url: 'assets/sendmail.php',
-            data: postdata,
-            dataType: 'json',
-            success: function(json) {
-                if(json.nameMessage != '') {
-                	nameLabel.append(' - <span class="violet error-label"> ' + json.nameMessage + '</span>');
-                }
-                if(json.emailMessage != '') {
-                	emailLabel.append(' - <span class="violet error-label"> ' + json.emailMessage + '</span>');
-                }
-                if(json.messageMessage != '') {
-                	messageLabel.append(' - <span class="violet error-label"> ' + json.messageMessage + '</span>');
-                }
-                if(json.nameMessage == '' && json.emailMessage == '' && json.messageMessage == '') {
-                	form.fadeOut('fast', function() {
-                		form.parent('.contact-form').append('<p><span class="violet">Thanks for contacting us!</span> We will get back to you very soon.</p>');
-                    });
-                }
-            }
-        });
-    });
-	
+/*
+Subscription form
+*/
+$('.success-message').hide();
+$('.error-message').hide();
+
+$('.footer-box-text-subscribe form').submit(function(e) {
+	e.preventDefault();
+
+	var form = $(this);
+	var postdata = form.serialize();
+
+	$.ajax({
+		type: 'POST',
+		url: 'assets/subscribe.php',
+		data: postdata,
+		dataType: 'json',
+		success: function(json) {
+			if(json.valid == 0) {
+				$('.success-message').hide();
+				$('.error-message').hide();
+				$('.error-message').html(json.message);
+				$('.error-message').fadeIn();
+			}
+			else {
+				$('.error-message').hide();
+				$('.success-message').hide();
+				form.hide();
+				$('.success-message').html(json.message);
+				$('.success-message').fadeIn();
+			}
+		}
+	});
+});
+
+/*
+Contact form
+*/
+$('.contact-form form').submit(function(e) {
+	e.preventDefault();
+
+	var form = $(this);
+	var nameLabel = form.find('label[for="contact-name"]');
+	var emailLabel = form.find('label[for="contact-email"]');
+	var messageLabel = form.find('label[for="contact-message"]');
+
+	nameLabel.html('Name');
+	emailLabel.html('Email');
+	messageLabel.html('Message');
+
+	var postdata = form.serialize();
+
+	$.ajax({
+		type: 'POST',
+		url: 'assets/sendmail.php',
+		data: postdata,
+		dataType: 'json',
+		success: function(json) {
+			if(json.nameMessage != '') {
+				nameLabel.append(' - <span class="violet error-label"> ' + json.nameMessage + '</span>');
+			}
+			if(json.emailMessage != '') {
+				emailLabel.append(' - <span class="violet error-label"> ' + json.emailMessage + '</span>');
+			}
+			if(json.messageMessage != '') {
+				messageLabel.append(' - <span class="violet error-label"> ' + json.messageMessage + '</span>');
+			}
+			if(json.nameMessage == '' && json.emailMessage == '' && json.messageMessage == '') {
+				form.fadeOut('fast', function() {
+					form.parent('.contact-form').append('<p><span class="violet">Thanks for contacting us!</span> We will get back to you very soon.</p>');
+				});
+			}
+		}
+	});
+});
+
 });
 
 
 jQuery(window).load(function() {
-	
+
 	/*
-	    Portfolio
+	Portfolio
 	*/
 	$('.portfolio-masonry').masonry({
-		columnWidth: '.portfolio-box', 
+		columnWidth: '.portfolio-box',
 		itemSelector: '.portfolio-box',
 		transitionDuration: '0.5s'
 	});
-	
+
 	$('.portfolio-filters a').on('click', function(e){
 		e.preventDefault();
 		if(!$(this).hasClass('active')) {
-	    	$('.portfolio-filters a').removeClass('active');
-	    	var clicked_filter = $(this).attr('class').replace('filter-', '');
-	    	$(this).addClass('active');
-	    	if(clicked_filter != 'all') {
-	    		$('.portfolio-box:not(.' + clicked_filter + ')').css('display', 'none');
-	    		$('.portfolio-box:not(.' + clicked_filter + ')').removeClass('portfolio-box');
-	    		$('.' + clicked_filter).addClass('portfolio-box');
-	    		$('.' + clicked_filter).css('display', 'block');
-	    		$('.portfolio-masonry').masonry();
-	    	}
-	    	else {
-	    		$('.portfolio-masonry > div').addClass('portfolio-box');
-	    		$('.portfolio-masonry > div').css('display', 'block');
-	    		$('.portfolio-masonry').masonry();
-	    	}
+			$('.portfolio-filters a').removeClass('active');
+			var clicked_filter = $(this).attr('class').replace('filter-', '');
+			$(this).addClass('active');
+			if(clicked_filter != 'all') {
+				$('.portfolio-box:not(.' + clicked_filter + ')').css('display', 'none');
+				$('.portfolio-box:not(.' + clicked_filter + ')').removeClass('portfolio-box');
+				$('.' + clicked_filter).addClass('portfolio-box');
+				$('.' + clicked_filter).css('display', 'block');
+				$('.portfolio-masonry').masonry();
+			}
+			else {
+				$('.portfolio-masonry > div').addClass('portfolio-box');
+				$('.portfolio-masonry > div').css('display', 'block');
+				$('.portfolio-masonry').masonry();
+			}
 		}
 	});
-	
+
 	$(window).on('resize', function(){ $('.portfolio-masonry').masonry(); });
-	
-	// image popup	
+
+	// image popup
 	$('.portfolio-box h3').magnificPopup({
 		type: 'image',
 		gallery: {
@@ -210,10 +220,10 @@ jQuery(window).load(function() {
 			}
 		}
 	});
-	
+
 	/*
-		Hidden images
+	Hidden images
 	*/
 	$(".testimonial-image img, .portfolio-box img").attr("style", "width: auto !important; height: auto !important;");
-	
+
 });
