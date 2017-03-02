@@ -506,14 +506,15 @@ footer {
 .about-text {
 	text-align: left;
 	h3 {
-		margin-top: 0;
 		font-family: Droid Sans, sans-serif;
 		font-size: 16px;
 		color: $dark-gray;
 		font-weight: bold;
 		text-transform: uppercase;
-		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
 		text-shadow: 0 1px 0 rgba(255,255,255,.7);
+		@media (min-width: 992px) {
+			margin-top: 0;
+		}
 	}
 	p {
 		line-height: 28px;
